@@ -37,6 +37,10 @@
     },
     "rules": {}
   },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions",
