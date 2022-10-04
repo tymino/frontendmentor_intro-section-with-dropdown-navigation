@@ -1,5 +1,5 @@
 <template>
-  <MySvg />
+  <MySvg :svgName="svg" />
 </template>
 
 <script>
@@ -10,6 +10,11 @@ export default {
   name: 'App',
   components: {
     MySvg,
+  },
+  data() {
+    return {
+      svg: 'client-audiophile',
+    };
   },
 };
 </script>

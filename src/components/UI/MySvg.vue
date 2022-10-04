@@ -1,5 +1,5 @@
 <template>
-  <img src="" alt="" srcset="" />
+  <img :src="`./images/${svgName}.svg`" alt="1" />
 </template>
 
 <script>
@@ -9,7 +9,6 @@ export default {
     svgName: {
       type: String,
       default: '',
-      required: true,
     },
   },
 };
