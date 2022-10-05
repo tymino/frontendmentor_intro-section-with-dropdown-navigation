@@ -1,16 +1,11 @@
 <template>
-  <MySvg :svgName="svg" />
+  <my-link linkName="First Link" />
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue';
-import MySvg from './components/UI/MySvg.vue';
-
 export default {
   name: 'App',
-  components: {
-    MySvg,
-  },
+  components: {},
   data() {
     return {
       svg: 'client-audiophile',
