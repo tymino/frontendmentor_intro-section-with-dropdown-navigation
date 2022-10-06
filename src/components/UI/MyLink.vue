@@ -1,4 +1,9 @@
-<template>{{ linkName }}</template>
+<template>
+  <a :href="linkHref" class="link">
+    <my-svg class="link__icon" v-if="svgName.length !== ''" svgName="icon-calendar.svg" />
+    <p class="link__text">{{ linkName }}</p>
+  </a>
+</template>
 
 <script>
 export default {
@@ -7,11 +12,10 @@ export default {
     linkName: {
       type: String,
       default: 'link',
-      required: true,
     },
-    hasSvg: {
-      type: Boolean,
-      default: false,
+    linkHref: {
+      type: String,
+      default: '#',
     },
     svgName: {
       type: String,
@@ -21,4 +25,16 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.link__icon {
+  margin-right: 10px;
+}
+.link__text {
+  color: var(--color-gray);
+}
+</style>

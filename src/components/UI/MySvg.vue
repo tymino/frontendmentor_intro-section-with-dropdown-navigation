@@ -1,5 +1,5 @@
 <template>
-  <img :src="`./images/${svgName}.svg`" alt="1" />
+  <img :src="`./images/${svgName}`" :alt="svgName.replace(/.svg/, '')" />
 </template>
 
 <script>
