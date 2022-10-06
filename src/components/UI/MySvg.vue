@@ -1,5 +1,5 @@
 <template>
-  <img :src="`./images/${svgName}`" :alt="svgName.replace(/.svg/, '')" />
+  <img :class="{ cube: isCube }" :src="`./images/${svgName}`" :alt="svgName.replace(/.svg/, '')" />
 </template>
 
 <script>
@@ -10,8 +10,17 @@ export default {
       type: String,
       default: '',
     },
+    isCube: {
+      type: Boolean,
+      default: true,
+    },
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.cube {
+  width: 16px;
+  height: 16px;
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
   <a :href="linkHref" class="link">
-    <my-svg class="link__icon" v-if="svgName.length !== ''" svgName="icon-calendar.svg" />
+    <my-svg class="link__icon" v-if="svgName.length != ''" :svgName="svgName" />
     <p class="link__text">{{ linkName }}</p>
   </a>
 </template>
@@ -31,10 +31,16 @@ export default {
   align-items: center;
   text-decoration: none;
 }
+.link:hover > .link__text {
+  color: var(--color-black);
+}
 .link__icon {
-  margin-right: 10px;
+  margin-right: 12px;
 }
 .link__text {
+  margin: 0;
   color: var(--color-gray);
+  white-space: nowrap;
+  text-transform: capitalize;
 }
 </style>

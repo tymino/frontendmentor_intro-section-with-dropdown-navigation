@@ -1,6 +1,7 @@
 <template>
-  <my-link linkName="calendar" />
-  <my-dropdown v-for="data in dropdownData" :key="data.id" :data="data" />
+  <div class="main">
+    <my-dropdown v-for="data in dropdownData" :key="data.id" :data="data" />
+  </div>
 </template>
 
 <script>
@@ -14,6 +15,7 @@ export default {
         {
           id: 0,
           title: 'features',
+          sidePos: 'right',
           linkList: [
             { id: '001', name: 'todo list', svgName: 'icon-todo.svg' },
             { id: '002', name: 'calendar', svgName: 'icon-calendar.svg' },
@@ -21,15 +23,16 @@ export default {
             { id: '004', name: 'planning', svgName: 'icon-planning.svg' },
           ],
         },
-        // {
-        //   id: 1,
-        //   title: 'company',
-        //   linkList: [
-        //     { id: '021', name: 'history', svgName: '' },
-        //     { id: '022', name: 'our team', svgName: '' },
-        //     { id: '023', name: 'blog', svgName: '' },
-        //   ],
-        // },
+        {
+          id: 1,
+          title: 'company',
+          sidePos: 'left',
+          linkList: [
+            { id: '021', name: 'history', svgName: '' },
+            { id: '022', name: 'our team', svgName: '' },
+            { id: '023', name: 'blog', svgName: '' },
+          ],
+        },
       ],
     };
   },
@@ -38,16 +41,20 @@ export default {
 
 <style>
 :root {
-  --color-white: hsl(0, 0%, 41%);
+  --color-white: hsl(0, 0%, 98%);
   --color-gray: hsl(0, 0%, 41%);
-  --color-black: hsl(0, 0%, 41%);
+  --color-black: hsl(0, 0%, 8%);
 }
 #app {
   font-family: 'Epilogue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
 }
 </style>
