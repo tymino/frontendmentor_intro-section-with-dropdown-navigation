@@ -1,5 +1,5 @@
 import MyDropdown from '@/components/UI/MyDropdown.vue';
+import MyIcon from '@/components/UI/MyIcon.vue';
 import MyLink from '@/components/UI/MyLink.vue';
-import MySvg from '@/components/UI/MySvg.vue';
 
-export default [MyDropdown, MyLink, MySvg];
+export default [MyDropdown, MyIcon, MyLink];

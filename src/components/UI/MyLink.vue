@@ -1,6 +1,6 @@
 <template>
   <a :href="linkHref" class="link">
-    <my-svg class="link__icon" v-if="svgName.length != ''" :svgName="svgName" />
+    <my-icon class="link__icon" v-if="iconName.length != ''" :iconName="iconName" />
     <p class="link__text">{{ linkName }}</p>
   </a>
 </template>
@@ -17,7 +17,7 @@ export default {
       type: String,
       default: '#',
     },
-    svgName: {
+    iconName: {
       type: String,
       default: '',
     },

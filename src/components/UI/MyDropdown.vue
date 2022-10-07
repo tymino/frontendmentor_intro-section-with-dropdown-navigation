@@ -2,17 +2,17 @@
 <template>
   <div class="dropdown" @click="toggleDropMenu">
     <p class="dropdown__title">{{ data.title }}</p>
-    <my-svg
+    <my-icon
       class="dropdown__arrow"
       :isCube="false"
-      :svgName="`icon-arrow-${isOpen ? 'up' : 'down'}.svg`"
+      :iconName="`icon-arrow-${isOpen ? 'up' : 'down'}.svg`"
     />
     <div class="dropdown__list" v-show="isOpen" :style="`${data.sidePos}: 0;`">
       <my-link
         v-for="link in data.linkList"
         :key="link.id"
         :linkName="link.name"
-        :svgName="link.svgName"
+        :iconName="link.iconName"
         style="margin-bottom: 16px"
       />
     </div>
@@ -24,7 +24,7 @@ export default {
   name: 'my-dropdown',
   data() {
     return {
-      isOpen: true,
+      isOpen: false,
     };
   },
   props: {
@@ -49,6 +49,7 @@ export default {
   user-select: none;
 }
 .dropdown__title {
+  margin: 0;
   text-transform: capitalize;
 }
 .dropdown__arrow {

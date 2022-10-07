@@ -1,12 +1,16 @@
 <template>
-  <img :class="{ cube: isCube }" :src="`./images/${svgName}`" :alt="svgName.replace(/.svg/, '')" />
+  <img
+    :class="{ cube: isCube }"
+    :src="`./images/${iconName}`"
+    :alt="iconName.replace(/.svg/, '')"
+  />
 </template>
 
 <script>
 export default {
-  name: 'my-svg',
+  name: 'my-icon',
   props: {
-    svgName: {
+    iconName: {
       type: String,
       default: '',
     },
