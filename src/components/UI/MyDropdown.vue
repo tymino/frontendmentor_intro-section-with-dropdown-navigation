@@ -1,19 +1,19 @@
 <!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <template>
-  <div class="dropdown" @click="toggleDropMenu">
+  <div class="dropdown" @click="clickInElement">
     <p class="dropdown__title">{{ data.title }}</p>
     <my-icon
       class="dropdown__arrow"
       :isCube="false"
       :iconName="`icon-arrow-${isOpen ? 'up' : 'down'}.svg`"
     />
-    <div class="dropdown__list" v-show="isOpen" :style="`${data.sidePos}: 0;`">
+    <div class="dropdown__list" v-show="isOpen" :style="`${data.sidePos}: 0;`" @click.stop>
       <my-link
+        class="dropdown__link"
         v-for="link in data.linkList"
         :key="link.id"
         :linkName="link.name"
         :iconName="link.iconName"
-        style="margin-bottom: 16px"
       />
     </div>
   </div>
@@ -33,23 +33,44 @@ export default {
       default: () => {},
     },
   },
+  created() {
+    window.addEventListener('click', this.outsideClick);
+  },
+  beforeUnmount() {
+    window.removeEventListener('click', this.outsideClick);
+  },
   methods: {
     toggleDropMenu() {
       this.isOpen = !this.isOpen;
+    },
+    close() {
+      this.isOpen = false;
+    },
+    outsideClick(event) {
+      if (!this.$el.contains(event.target)) {
+        this.close();
+      }
+      if (this.$el.contains(event.target)) this.toggleDropMenu();
     },
   },
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .dropdown {
   position: relative;
   display: flex;
   align-items: center;
   user-select: none;
+  cursor: pointer;
+
+  &:hover .dropdown__title {
+    color: var(--color-black);
+  }
 }
 .dropdown__title {
   margin: 0;
+  color: var(--color-gray);
   text-transform: capitalize;
 }
 .dropdown__arrow {
@@ -57,9 +78,13 @@ export default {
 }
 .dropdown__list {
   position: absolute;
-  top: 90%;
-  padding: 20px 20px 4px 20px;
+  top: 40px;
+  padding: 26px;
   border-radius: 10px;
   box-shadow: 0px 2px 6px 0px var(--color-gray);
+
+  .dropdown__link:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 </style>

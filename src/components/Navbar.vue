@@ -2,10 +2,15 @@
   <div class="navbar">
     <my-icon class="navbar__logo" iconName="logo.svg" />
     <div class="navbar__wrapper">
-      <div class="navbar__links">
-        <my-dropdown v-for="data in dropdownData" :key="data.id" :data="data" />
-        <my-link linkName="careers" />
-        <my-link linkName="About" />
+      <div class="navbar__link-container">
+        <my-dropdown
+          class="navbar__link"
+          v-for="data in dropdownData"
+          :key="data.id"
+          :data="data"
+        />
+        <my-link class="navbar__link" linkName="careers" />
+        <my-link class="navbar__link" linkName="About" />
       </div>
       <div class="navbar__buttons"></div>
     </div>
@@ -48,18 +53,24 @@ export default {
 <style scoped>
 .navbar {
   display: flex;
+  width: 100%;
 }
 .navbar__wrapper {
   display: flex;
 }
-.navbar__links {
+.navbar__link-container {
   display: flex;
+}
+.navbar__link {
+  margin-left: 40px;
 }
 .navbar__buttons {
   display: flex;
 }
 .navbar__logo {
-  /* width: 100px;
-  height: 100px; */
+  width: 87px;
+  height: 27px;
+  margin-right: 40px;
+  user-select: none;
 }
 </style>

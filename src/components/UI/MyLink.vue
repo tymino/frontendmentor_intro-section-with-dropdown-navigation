@@ -30,6 +30,7 @@ export default {
   display: flex;
   align-items: center;
   text-decoration: none;
+  user-select: none;
 }
 .link:hover > .link__text {
   color: var(--color-black);
