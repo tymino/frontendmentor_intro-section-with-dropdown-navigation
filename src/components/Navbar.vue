@@ -12,7 +12,11 @@
         <my-link class="navbar__link" linkName="careers" />
         <my-link class="navbar__link" linkName="About" />
       </div>
-      <div class="navbar__buttons"></div>
+      <div class="navbar__button-container">
+        <my-button class="navbar__button" buttonType="secondary">login</my-button>
+        <my-button class="navbar__button" buttonType="primary">register</my-button>
+        <my-button class="navbar__button" buttonType="action">test</my-button>
+      </div>
     </div>
   </div>
 </template>
@@ -55,8 +59,16 @@ export default {
   display: flex;
   width: 100%;
 }
+.navbar__logo {
+  width: 87px;
+  height: 27px;
+  margin-right: 40px;
+  user-select: none;
+}
 .navbar__wrapper {
   display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 .navbar__link-container {
   display: flex;
@@ -64,13 +76,10 @@ export default {
 .navbar__link {
   margin-left: 40px;
 }
-.navbar__buttons {
+.navbar__button-container {
   display: flex;
 }
-.navbar__logo {
-  width: 87px;
-  height: 27px;
-  margin-right: 40px;
-  user-select: none;
+.navbar__button {
+  margin-left: 20px;
 }
 </style>
