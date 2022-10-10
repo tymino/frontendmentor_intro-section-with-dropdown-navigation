@@ -80,7 +80,7 @@ export default {
   position: absolute;
   top: 40px;
   padding: 26px;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   box-shadow: 0px 2px 6px 0px var(--color-gray);
 
   .dropdown__link:not(:last-child) {

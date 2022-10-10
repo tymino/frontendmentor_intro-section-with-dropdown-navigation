@@ -18,9 +18,10 @@ export default {
 
 <style lang="scss" scoped>
 .button {
-  border-radius: 14px;
   padding: 10px 20px;
+  border-radius: var(--border-radius);
   font-size: 1rem;
+  font-family: var(--font-family);
   text-transform: capitalize;
   cursor: pointer;
 
@@ -28,6 +29,7 @@ export default {
     border: 2px solid var(--color-black);
     background: var(--color-black);
     color: var(--color-white);
+    transition: all ease 0.4s;
 
     &:hover {
       border: 2px solid var(--color-black);
@@ -40,6 +42,7 @@ export default {
     border: 2px solid var(--color-gray);
     background: var(--color-white);
     color: var(--color-gray);
+    transition: all ease 0.2s;
 
     &:hover {
       border: 2px solid var(--color-black);

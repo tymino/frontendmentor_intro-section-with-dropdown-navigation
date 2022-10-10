@@ -15,7 +15,6 @@
       <div class="navbar__button-container">
         <my-button class="navbar__button" buttonType="secondary">login</my-button>
         <my-button class="navbar__button" buttonType="primary">register</my-button>
-        <my-button class="navbar__button" buttonType="action">test</my-button>
       </div>
     </div>
   </div>
@@ -57,6 +56,7 @@ export default {
 <style scoped>
 .navbar {
   display: flex;
+  align-items: center;
   width: 100%;
 }
 .navbar__logo {
