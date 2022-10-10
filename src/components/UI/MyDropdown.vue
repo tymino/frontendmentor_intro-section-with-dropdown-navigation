@@ -1,12 +1,14 @@
 <!-- eslint-disable vuejs-accessibility/click-events-have-key-events -->
 <template>
   <div class="dropdown" @click="clickInElement">
-    <p class="dropdown__title">{{ data.title }}</p>
-    <my-icon
-      class="dropdown__arrow"
-      :isCube="false"
-      :iconName="`icon-arrow-${isOpen ? 'up' : 'down'}.svg`"
-    />
+    <div class="dropdown__header">
+      <p class="dropdown__title">{{ data.title }}</p>
+      <my-icon
+        class="dropdown__arrow"
+        :isCube="false"
+        :iconName="`icon-arrow-${isOpen ? 'up' : 'down'}.svg`"
+      />
+    </div>
     <div class="dropdown__list" v-show="isOpen" :style="`${data.sidePos}: 0;`" @click.stop>
       <my-link
         class="dropdown__link"
@@ -59,14 +61,16 @@ export default {
 <style lang="scss" scoped>
 .dropdown {
   position: relative;
-  display: flex;
-  align-items: center;
   user-select: none;
   cursor: pointer;
 
   &:hover .dropdown__title {
     color: var(--color-black);
   }
+}
+.dropdown__header {
+  display: flex;
+  align-items: center;
 }
 .dropdown__title {
   margin: 0;
@@ -85,6 +89,24 @@ export default {
 
   .dropdown__link:not(:last-child) {
     margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .dropdown {
+  }
+  .dropdown__header {
+  }
+  .dropdown__title {
+  }
+  .dropdown__arrow {
+  }
+  .dropdown__list {
+    position: static;
+    top: 0;
+    /* padding-bottom: 10px; */
+    border-radius: none;
+    box-shadow: none;
   }
 }
 </style>

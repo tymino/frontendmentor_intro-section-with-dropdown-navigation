@@ -32,6 +32,7 @@ export default {
 }
 html {
   font-family: var(--font-family);
+  background: var(--color-white);
 }
 #app {
   text-align: center;
