@@ -37,7 +37,7 @@ export default {
   name: 'nav-bar',
   data() {
     return {
-      isOpenBurger: true,
+      isOpenBurger: false,
       dropdownData: [
         {
           id: 0,
