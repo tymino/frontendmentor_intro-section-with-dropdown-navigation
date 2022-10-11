@@ -18,7 +18,7 @@ export default {
 
 <style lang="scss" scoped>
 .button {
-  padding: 10px 20px;
+  padding: 14px 20px;
   border-radius: var(--border-radius);
   font-size: 1rem;
   font-family: var(--font-family);

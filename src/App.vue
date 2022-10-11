@@ -1,15 +1,18 @@
 <template>
   <div class="main">
-    <navbar />
+    <c-navbar />
+    <c-content />
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue';
+import CNavbar from '@/components/Navbar.vue';
+import CContent from '@/components/Content.vue';
 
 export default {
   components: {
-    Navbar,
+    CNavbar,
+    CContent,
   },
 };
 </script>
@@ -41,6 +44,7 @@ html {
 
 .main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 </style>

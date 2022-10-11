@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  name: 'nav-bar',
+  name: 'c-navbar',
   data() {
     return {
       isOpenBurger: false,
