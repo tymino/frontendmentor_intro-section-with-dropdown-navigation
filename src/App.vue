@@ -59,10 +59,11 @@ html {
 
 .attribution {
   position: absolute;
-  bottom: 6px;
+  top: 6px;
   left: 6px;
   font-size: 0.7rem;
   color: var(--color-black);
+  opacity: .6;
 
   a {
     color: var(--color-gray);
