@@ -2,6 +2,14 @@
   <div class="main">
     <c-navbar />
     <c-content />
+    <div class="attribution">
+      Challenge by
+      <a
+        href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5"
+        target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/tymino">tymino</a>.
+    </div>
   </div>
 </template>
 
@@ -17,7 +25,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 :root {
   --font-size: 16px;
   --font-family: 'Epilogue', sans-serif;
@@ -38,6 +46,7 @@ html {
   background: var(--color-white);
 }
 #app {
+  position: relative;
   text-align: center;
   padding: 30px;
 }
@@ -46,5 +55,21 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  font-size: 0.7rem;
+  color: var(--color-black);
+
+  a {
+    color: var(--color-gray);
+
+    &:hover {
+      color: var(--color-black);
+    }
+  }
 }
 </style>
