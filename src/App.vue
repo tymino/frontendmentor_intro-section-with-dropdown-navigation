@@ -36,15 +36,18 @@ export default {
   --color-gray: hsl(0, 0%, 41%);
   --color-black: hsl(0, 0%, 8%);
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html {
   font-family: var(--font-family);
   background: var(--color-white);
 }
+
 #app {
   position: relative;
   text-align: center;
@@ -63,7 +66,7 @@ html {
   left: 6px;
   font-size: 0.7rem;
   color: var(--color-black);
-  opacity: .6;
+  opacity: 0.6;
 
   a {
     color: var(--color-gray);

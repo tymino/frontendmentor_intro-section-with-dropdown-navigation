@@ -93,18 +93,9 @@ export default {
 }
 
 @media (max-width: 900px) {
-  .dropdown {
-  }
-  .dropdown__header {
-  }
-  .dropdown__title {
-  }
-  .dropdown__arrow {
-  }
   .dropdown__list {
     position: static;
     top: 0;
-    /* padding-bottom: 10px; */
     border-radius: none;
     box-shadow: none;
   }
