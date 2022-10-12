@@ -38,7 +38,7 @@ export default {
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: 494px;
+  width: 494px;
 }
 .information__title {
   margin-bottom: 60px;
@@ -62,5 +62,57 @@ export default {
 }
 .information__client-item:not(:last-child) {
   margin-right: 20px;
+}
+
+@media (max-width: 1000px) {
+  .information {
+    max-width: 494px;
+    margin-top: 80px;
+  }
+  .information__title {
+    margin-bottom: 30px;
+    font-size: 3.2rem;
+    text-align: center;
+  }
+  .information__describe {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .information__button {
+    align-self: center;
+    margin-bottom: 40px;
+  }
+  .information__client-list {
+    justify-content: center;
+  }
+}
+@media (max-width: 525px) {
+  .information {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .information__title {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .information__describe {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-align: center;
+  }
+  .information__button {
+    align-self: center;
+    margin-bottom: 40px;
+  }
+  .information__client-list {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .information__client-item:not(:last-child) {
+    margin-right: 16px;
+    margin-bottom: 12px;
+  }
 }
 </style>

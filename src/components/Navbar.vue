@@ -115,7 +115,7 @@ export default {
   margin-left: 20px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .navbar {
     position: relative;
     justify-content: space-between;
